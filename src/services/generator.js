@@ -105,6 +105,7 @@ module.exports = {
       pool = pool.filter(char => !excludeArray.includes(char));
     }
     pool = await shuffleArray(pool);
+
     return Promise.resolve(pool);
   },
 
@@ -114,6 +115,7 @@ module.exports = {
       const randomNumber = Math.floor(Math.random() * pool.length);
       selectedChars.push(...pool[randomNumber]);
     }
+
     return Promise.resolve(selectedChars);
   },
 
@@ -121,6 +123,7 @@ module.exports = {
     const keys = Object.keys(options);
     const modifiedKeys = keys.filter(key => !excludeOptions.includes(key));
     let validated = 0;
+
     modifiedKeys.forEach(key => {
       if (key === 'lowerCase') {
         if (hasLowercase(string)) validated++;
@@ -135,6 +138,7 @@ module.exports = {
         if (hasSymbol(string)) validated++;
       }
     });
+
     return modifiedKeys.length === validated;
   },
 };

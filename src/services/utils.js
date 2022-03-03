@@ -1,5 +1,5 @@
 const premadeFilters = [
-  { name: 'urlSafeChars', excluded: ['?', '>', '<', '=', '+', '&', '^', '%', '`'] },
+  { name: 'urlSafeChars', excluded: ['?', '>', '<', '=', '+', '&', '^', '%', '`', '#'] },
 ];
 
 module.exports = {
